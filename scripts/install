@@ -39,16 +39,16 @@ nextcloud_domain=$YNH_APP_ARG_NEXTCLOUDDOMAIN
 ### db names, ...
 app=$YNH_APP_INSTANCE_NAME
 
+# Check web path availability
+ynh_webpath_available $domain $path_url
+# Register (book) web path
+ynh_webpath_register $app $domain $path_url
+
 # Save app settings
 ynh_app_setting_set $app is_public $is_public
 ynh_app_setting_set $app domain $domain
 ynh_app_setting_set $app path $path_url
 ynh_app_setting_set $app nextcloud_domain $nextcloud_domain
-
-# Check web path availability
-ynh_webpath_available $domain $path_url
-# Register (book) web path
-ynh_webpath_register $app $domain $path_url
 
 #=================================================
 # STANDARD MODIFICATIONS
