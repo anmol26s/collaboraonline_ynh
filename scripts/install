@@ -22,6 +22,7 @@ ynh_abort_if_errors
 
 # Retrieve arguments
 domain=$YNH_APP_ARG_DOMAIN
+path_url="/"
 is_public=$YNH_APP_ARG_IS_PUBLIC
 password=$YNH_APP_ARG_PASSWORD
 nextcloud_domain=$YNH_APP_ARG_NEXTCLOUDDOMAIN
@@ -41,7 +42,6 @@ app=$YNH_APP_INSTANCE_NAME
 # Save app settings
 ynh_app_setting_set $app is_public $is_public
 ynh_app_setting_set $app domain $domain
-ynh_app_setting_set $app path $path_url
 ynh_app_setting_set $app path $path_url
 ynh_app_setting_set $app nextcloud_domain $nextcloud_domain
 
